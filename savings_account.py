@@ -1,10 +1,10 @@
 from Account import Account
 
 class Savings(Account):
-    def __init__(self, owner, balance=0):
+    def __init__(self, owner, balance=0, withdrawal_limit = 100):
         super().__init__(owner, balance)
         self.interest_rate = 0.02  # Example interest rate
-        self.withdrawal_limit = 100  # Example withdrawal limit
+        self.withdrawal_limit = withdrawal_limit
 
     def apply_interest(self):
         interest = self.get_balance() * self.interest_rate
